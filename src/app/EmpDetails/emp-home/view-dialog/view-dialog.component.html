@@ -1,0 +1,112 @@
+<h2 mat-dialog-title>Employee Details</h2>
+<mat-dialog-content>
+    <mat-card>
+        <div class='d-flex justify-content-center'>
+            <img height='70px' width='70px' src='{{Details.image}}' alt='{{Details.username}}'>
+        </div>
+        <hr>
+        <div class='d-flex'>
+            <p class='col-3'>Id : <span>{{Details.id}}</span></p>
+            <p class='col-3'>FirstName : <span>{{Details.firstName}}</span></p>
+            <p class='col-3'>LastName : <span>{{Details.lastName}}</span></p>
+            <p class='col-3'>MaidenName : <span>{{Details.maidenName}}</span></p>
+        </div>
+        <div class='d-flex justify-content-between'>
+            <p class='col-3'>Age : <span>{{Details.age}}</span></p>
+            <p class='col-3'>Gender : <span>{{Details.gender}}</span></p>
+            <p class='col-3'>Email : <span>{{Details.email}}</span></p>
+            <p class='col-3'>PhoneNo : <span>{{Details.phone}}</span></p>
+        </div>
+        <div class='d-flex justify-content-between'>
+            <p class='col-3'>UserName : <span>{{Details.username}}</span></p>
+            <p class='col-3'>Password : <span>{{Details.password}}</span></p>
+            <p class='col-3'>BirthDate : <span>{{Details.birthDate}}</span></p>
+            <p class='col-3'>BloodGroup : <span>{{Details.bloodGroup}}</span></p>
+        </div>
+        <div class='d-flex justify-content-between'>
+            <p class='col-3'>Height : <span>{{Details.height}}</span></p>
+            <p class='col-3'>Weight : <span>{{Details.weight}}</span></p>
+            <p class='col-3'>EyeColor : <span>{{Details.eyeColor}}</span></p>
+            <p class='col-3'>Domain : <span> {{Details.domain}}</span></p>
+        </div>
+        <hr>
+        <div>
+            <h3>Hair :- </h3>
+            <div class='d-flex justify-content-center`'>
+                <p class='col-3'>Color : <span>{{Details.hair.color}}</span></p>
+                <p class='col-3'>Type : <span>{{Details.hair.type}}</span></p>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h3>Address :- </h3>
+            <div class='d-flex justify-content-between'>
+                <p class='col-3'>Address : <span>{{Details.address.address}}</span></p>
+                <p class='col-2'>City : <span>{{Details.address.city}}</span></p>
+                <p class='col-2'>PostalCode : <span>{{Details.address.postalCode}}</span></p>
+                <p class='col-2'>State : <span>{{Details.address.state}}</span></p>
+                <div class='col-3'>
+                    <h4>Coordinates :- </h4>
+                    <div>
+                        <p>Lat : <span>{{Details.address.coordinates.lat}}</span></p>
+                        <p>Lng : <span>{{Details.address.coordinates.lng}}</span></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class='d-flex justify-content-between'>
+            <p class='col-3'>MacAddress : <span> {{Details.macAddress}}</span></p>
+            <p class='col-3'>University : <span>{{Details.university}}</span></p>
+            <p class='col-3'>EIN : <span>{{Details.ein}}</span></p>
+            <p class='col-3'>SSN : <span>{{Details.ssn}}</span></p>
+        </div>
+        <hr>
+        <div>
+            <h3>Bank :- </h3>
+            <div class='d-flex justify-content-between'>
+                <p class='col-2'>CardExpire : <span>{{Details.bank.cardExpire}}</span></p>
+                <p class='col-2'>CardNumber : <span>{{Details.bank.cardNumber}}</span></p>
+                <p class='col-3'>CardType : <span>{{Details.bank.cardType}}</span></p>
+                <p class='col-2'>Currency : <span>{{Details.bank.currency}}</span></p>
+                <p class='col-3'>Iban : <span>{{Details.bank.iban}}</span></p>
+
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h3>Company Address :- </h3>
+            <div class='d-flex justify-content-between'>
+                <p class='col-3'>Address : <span>{{Details.company.address.address}}</span></p>
+                <p class='col-2'>City : <span>{{Details.company.address.city}}</span></p>
+                <p class='col-2'>PostalCode : <span>{{Details.company.address.postalCode}}</span></p>
+                <p class='col-2'>State : <span>{{Details.company.address.state}}</span></p>
+                <div class='col-3'>
+                    <h4>Coordinates :- </h4>
+                    <div>
+                        <p>Lat : <span>{{Details.company.address.coordinates.lat}}</span></p>
+                        <p>Lng : <span>{{Details.company.address.coordinates.lng}}</span></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class='d-flex justify-content-between'>
+            <p class='col-3'>Department : <span>{{Details.company.department}}</span></p>
+            <p class='col-3'>Name : <span>{{Details.company.name}}</span></p>
+            <p class='col-3'>Title : <span>{{Details.company.title}}</span></p>
+            <p class='col-3'>UserAgent : <span>{{Details.userAgent}}</span></p>
+        </div>
+
+
+
+    </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions align='end'>
+    <button mat-raised-button color='primary' mat-dialog-close>Cancel</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <!-- <button mat-button [mat-dialog-close]='true'>Delete</button> -->
+    <!-- <button mat-flat-button color='primary'> Save</button> -->
+</mat-dialog-actions>
