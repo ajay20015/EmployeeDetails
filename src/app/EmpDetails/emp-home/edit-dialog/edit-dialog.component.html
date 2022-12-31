@@ -1,222 +1,229 @@
-<h1 mat-dialog-title class='d-flex justify-content-between mt-2'>Employee Form <button mat-icon-button
-        mat-dialog-close><mat-icon>close</mat-icon></button></h1>
+<h1 mat-dialog-title class='d-flex justify-content-between  heading'>
+    <h2 class="mt-4 text-light">Employee Form </h2><button class="mt-3" mat-icon-button
+        mat-dialog-close><mat-icon>close</mat-icon></button>
+</h1>
 <div mat-dialog-content>
     <mat-card>
-        <form [formGroup]='EmployeeDatas' class='mt-3'>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>FirstName</mat-label>
-                <input matInput type='text' placeholder='Enter FirstName' formControlName='firstName'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>LastName</mat-label>
-                <input matInput type='text' placeholder='Enter LastName' formControlName='lastName'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>MaidenName</mat-label>
-                <input matInput type='text' placeholder='Enter MaidenName' formControlName='maidenName'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>Age</mat-label>
-                <input matInput type='number' placeholder='Enter Age' formControlName='age'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>Email</mat-label>
-                <input type='email' matInput placeholder='Enter Email' formControlName='email'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>PhoneNumber</mat-label>
-                <input matInput placeholder='Enter PhoneNumber' type='text' formControlName='phone'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>UserName</mat-label>
-                <input matInput placeholder='Enter UserName' type='text' formControlName='username'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>Password</mat-label>
-                <input matInput placeholder='Enter Password' type='password' formControlName='password'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>BloodGroup</mat-label>
-                <input type='email' matInput placeholder='Enter BloodGroup' formControlName='bloodGroup'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>Height</mat-label>
-                <input matInput placeholder='Enter Height' type='number' formControlName='height'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>Weight</mat-label>
-                <input matInput placeholder='Enter Weight' type='number' formControlName='weight'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>EyeColor</mat-label>
-                <input matInput placeholder='Enter EyeColor' type='text' formControlName='eyeColor'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>BirthDate</mat-label>
-                <input formControlName='birthDate' matInput [matDatepicker]='picker'>
-                <mat-hint>MM/DD/YYYY</mat-hint>
-                <mat-datepicker-toggle matIconSuffix [for]='picker'></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>Domain</mat-label>
-                <input matInput placeholder='Enter Domain' type='text' formControlName='domain'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>IP</mat-label>
-                <input matInput placeholder='Enter IP' type='text' formControlName='ip'>
-            </mat-form-field>
-            <div class='d-flex'>
-                <div class='me-auto'>
-                    <mat-label>Gender :</mat-label> <br>
-                    <mat-radio-group formControlName='gender' class='me-2'>
-                        <mat-radio-button value='male'>Male</mat-radio-button>
-                        <mat-radio-button value='female'>Female</mat-radio-button>
-                    </mat-radio-group>
-                </div>
-                <div formGroupName='hair'>
-                    <mat-label>Hair :</mat-label> <br>
-                    <mat-form-field appearance='outline' class='me-2'>
-                        <mat-label>Color</mat-label>
-                        <input matInput placeholder='Enter Color' type='text' formControlName='color'>
-                    </mat-form-field>
-                    <mat-form-field appearance='outline' class='me-2'>
-                        <mat-label>Type</mat-label>
-                        <input matInput placeholder='Enter Type' type='text' formControlName='type'>
-                    </mat-form-field>
-                </div>
-            </div>
-
-            <div formGroupName='address'>
-                <mat-label>Personal Address :</mat-label><br>
-
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>Address</mat-label>
-                    <input type='text' matInput placeholder='Enter Address' formControlName='address'>
+        <form [formGroup]='EmployeeDatas'>
+            <h1 class="m-2">Employee Details :-</h1>
+            <div class="personal-info">
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>FirstName</mat-label>
+                    <input matInput type='text' placeholder='Enter FirstName' formControlName='firstName'>
                 </mat-form-field>
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>City</mat-label>
-                    <input matInput placeholder='Enter City' type='text' formControlName='city'>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>LastName</mat-label>
+                    <input matInput type='text' placeholder='Enter LastName' formControlName='lastName'>
                 </mat-form-field>
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>State</mat-label>
-                    <input type='text' matInput placeholder='Enter State' formControlName='state'>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>MaidenName</mat-label>
+                    <input matInput type='text' placeholder='Enter MaidenName' formControlName='maidenName'>
                 </mat-form-field>
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>PostalCode</mat-label>
-                    <input matInput placeholder='Enter PostalCode' type='number' formControlName='postalCode'>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>Age</mat-label>
+                    <input matInput type='number' placeholder='Enter Age' formControlName='age'>
                 </mat-form-field>
-                <div formGroupName='coordinates'>
-                    <mat-label>Coordinates :</mat-label><br>
-                    <mat-form-field appearance='outline' class='me-2'>
-                        <mat-label>Lat</mat-label>
-                        <input matInput placeholder='Enter Lat' type='number' formControlName='lat'>
-                    </mat-form-field>
-                    <mat-form-field appearance='outline' class='me-2'>
-                        <mat-label>Lng</mat-label>
-                        <input matInput placeholder='Enter Lng' type='number' formControlName='lng'>
-                    </mat-form-field>
-                </div>
-            </div>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>MacAddress</mat-label>
-                <input matInput placeholder='Enter MacAddress' type='text' formControlName='macAddress'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>University</mat-label>
-                <input matInput placeholder='Enter University' type='text' formControlName='university'>
-            </mat-form-field>
-            <div formGroupName='bank'>
-                <mat-label>Bank Details :</mat-label> <br>
-
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>CardExpire</mat-label>
-                    <input formControlName='cardExpire' matInput [matDatepicker]='picker1'>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>Email</mat-label>
+                    <input type='email' matInput placeholder='Enter Email' formControlName='email'>
+                </mat-form-field>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>PhoneNumber</mat-label>
+                    <input matInput placeholder='Enter PhoneNumber' type='text' formControlName='phone'>
+                </mat-form-field>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>UserName</mat-label>
+                    <input matInput placeholder='Enter UserName' type='text' formControlName='username'>
+                </mat-form-field>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder='Enter Password' type='password' formControlName='password'>
+                </mat-form-field>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>BloodGroup</mat-label>
+                    <input type='email' matInput placeholder='Enter BloodGroup' formControlName='bloodGroup'>
+                </mat-form-field>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>Height</mat-label>
+                    <input matInput placeholder='Enter Height' type='number' formControlName='height'>
+                </mat-form-field>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>Weight</mat-label>
+                    <input matInput placeholder='Enter Weight' type='number' formControlName='weight'>
+                </mat-form-field>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>EyeColor</mat-label>
+                    <input matInput placeholder='Enter EyeColor' type='text' formControlName='eyeColor'>
+                </mat-form-field>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>BirthDate</mat-label>
+                    <input formControlName='birthDate' matInput [matDatepicker]='picker'>
                     <mat-hint>MM/DD/YYYY</mat-hint>
-                    <mat-datepicker-toggle matIconSuffix [for]='picker1'></mat-datepicker-toggle>
-                    <mat-datepicker #picker1></mat-datepicker>
+                    <mat-datepicker-toggle matIconSuffix [for]='picker'></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
-
-
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>CardNumber</mat-label>
-                    <input type='number' matInput placeholder='Enter CardNumber' formControlName='cardNumber'>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>Domain</mat-label>
+                    <input matInput placeholder='Enter Domain' type='text' formControlName='domain'>
                 </mat-form-field>
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>CardType</mat-label>
-                    <input matInput placeholder='Enter CardType' type='text' formControlName='cardType'>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>IP</mat-label>
+                    <input matInput placeholder='Enter IP' type='text' formControlName='ip'>
                 </mat-form-field>
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>Currency</mat-label>
-                    <input type='text' matInput placeholder='Enter Currency' formControlName='currency'>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>MacAddress</mat-label>
+                    <input matInput placeholder='Enter MacAddress' type='text' formControlName='macAddress'>
                 </mat-form-field>
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>Iban</mat-label>
-                    <input matInput placeholder='Enter Iban' type='text' formControlName='iban'>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>University</mat-label>
+                    <input matInput placeholder='Enter University' type='text' formControlName='university'>
                 </mat-form-field>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>EIN</mat-label>
+                    <input matInput placeholder='Enter EIN' type='text' formControlName='ein'>
+                </mat-form-field>
+                <mat-form-field appearance='fill' class='me-3'>
+                    <mat-label>SSN</mat-label>
+                    <input type='text' matInput placeholder='Enter SSN' formControlName='ssn'>
+                </mat-form-field>
+                <mat-form-field appearance='fill'>
+                    <mat-label>UserAgent</mat-label>
+                    <textarea matInput placeholder='Enter UserAgent' type='text' formControlName='userAgent'></textarea>
+                </mat-form-field><br>
+                <div class='d-flex'>
+                    <div class='me-3'>
+                        <h3>Gender :-</h3>
+                        <mat-radio-group color="primary" formControlName='gender' class='me-2'>
+                            <mat-radio-button value='male'>Male</mat-radio-button>
+                            <mat-radio-button value='female'>Female</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div formGroupName='hair'>
+                        <h3>Hair :- </h3>
+                        <mat-form-field appearance='fill' class='mx-3'>
+                            <mat-label>Color</mat-label>
+                            <input matInput placeholder='Enter Color' type='text' formControlName='color'>
+                        </mat-form-field>
+                        <mat-form-field appearance='fill' class='me-2'>
+                            <mat-label>Type</mat-label>
+                            <input matInput placeholder='Enter Type' type='text' formControlName='type'>
+                        </mat-form-field>
+                    </div>
+                </div>
             </div>
-            <div formGroupName='company'>
-                <mat-label>Company :</mat-label>
-                <div formGroupName='address'>
-                    <mat-label>Company Address :</mat-label> <br>
-                    <mat-form-field appearance='outline' class='me-2'>
+            <div formGroupName='address' class="personal-address">
+                <h2>Personal Address :-</h2>
+                <div class="personal-address1">
+                    <mat-form-field appearance='fill' class='me-3'>
                         <mat-label>Address</mat-label>
                         <input type='text' matInput placeholder='Enter Address' formControlName='address'>
                     </mat-form-field>
-                    <mat-form-field appearance='outline' class='me-2'>
+                    <mat-form-field appearance='fill' class='me-3'>
                         <mat-label>City</mat-label>
                         <input matInput placeholder='Enter City' type='text' formControlName='city'>
                     </mat-form-field>
-                    <mat-form-field appearance='outline' class='me-2'>
+                    <mat-form-field appearance='fill' class='me-3'>
                         <mat-label>State</mat-label>
                         <input type='text' matInput placeholder='Enter State' formControlName='state'>
                     </mat-form-field>
-                    <mat-form-field appearance='outline' class='me-2'>
+                    <mat-form-field appearance='fill' class='me-3'>
                         <mat-label>PostalCode</mat-label>
                         <input matInput placeholder='Enter PostalCode' type='number' formControlName='postalCode'>
                     </mat-form-field>
                     <div formGroupName='coordinates'>
-                        <mat-label>Coordinates :</mat-label><br>
-                        <mat-form-field appearance='outline' class='me-2'>
+                        <h3>Coordinates :</h3>
+                        <mat-form-field appearance='fill' class='mx-3'>
                             <mat-label>Lat</mat-label>
                             <input matInput placeholder='Enter Lat' type='number' formControlName='lat'>
                         </mat-form-field>
-                        <mat-form-field appearance='outline' class='me-2'>
+                        <mat-form-field appearance='fill' class='me-2'>
                             <mat-label>Lng</mat-label>
                             <input matInput placeholder='Enter Lng' type='number' formControlName='lng'>
                         </mat-form-field>
                     </div>
                 </div>
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>Department</mat-label>
-                    <input matInput placeholder='Enter Department' type='text' formControlName='department'>
-                </mat-form-field>
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>Name</mat-label>
-                    <input type='text' matInput placeholder='Enter Name' formControlName='name'>
-                </mat-form-field>
-                <mat-form-field appearance='outline' class='me-2'>
-                    <mat-label>Title</mat-label>
-                    <input matInput placeholder='Enter Title' type='text' formControlName='title'>
-                </mat-form-field>
             </div>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>EIN</mat-label>
-                <input matInput placeholder='Enter EIN' type='text' formControlName='ein'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>SSN</mat-label>
-                <input type='text' matInput placeholder='Enter SSN' formControlName='ssn'>
-            </mat-form-field>
-            <mat-form-field appearance='outline' class='me-2'>
-                <mat-label>UserAgent</mat-label>
-                <input matInput placeholder='Enter UserAgent' type='text' formControlName='userAgent'>
-            </mat-form-field>
+            <div formGroupName='bank'>
+                <h2>Bank Details :</h2>
+                <div class="bank-details">
+                    <mat-form-field appearance='fill' class='me-3'>
+                        <mat-label>CardNumber</mat-label>
+                        <input type='number' matInput placeholder='Enter CardNumber' formControlName='cardNumber'>
+                    </mat-form-field>
+                    <mat-form-field appearance='fill' class='me-3'>
+                        <mat-label>CardType</mat-label>
+                        <input matInput placeholder='Enter CardType' type='text' formControlName='cardType'>
+                    </mat-form-field>
+                    <mat-form-field appearance='fill' class='me-3'>
+                        <mat-label>Currency</mat-label>
+                        <input type='text' matInput placeholder='Enter Currency' formControlName='currency'>
+                    </mat-form-field>
+                    <mat-form-field appearance='fill' class='me-3'>
+                        <mat-label>CardExpire</mat-label>
+                        <input formControlName='cardExpire' matInput [matDatepicker]='picker1'>
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]='picker1'></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field appearance='fill' class='me-3'>
+                        <mat-label>Iban</mat-label>
+                        <input matInput placeholder='Enter Iban' type='text' formControlName='iban'>
+                    </mat-form-field>
+                </div>
+            </div>
+            <br>
+            <div formGroupName='company'>
+                <h2>Company Details :</h2>
+                <div formGroupName='address' class="company-address">
+                    <h3>Company Address :</h3>
+                    <div class="company-address1">
+                        <mat-form-field appearance='fill' class='me-2'>
+                            <mat-label>Address</mat-label>
+                            <input type='text' matInput placeholder='Enter Address' formControlName='address'>
+                        </mat-form-field>
+                        <mat-form-field appearance='fill' class='me-2'>
+                            <mat-label>City</mat-label>
+                            <input matInput placeholder='Enter City' type='text' formControlName='city'>
+                        </mat-form-field>
+                        <mat-form-field appearance='fill' class='me-2'>
+                            <mat-label>State</mat-label>
+                            <input type='text' matInput placeholder='Enter State' formControlName='state'>
+                        </mat-form-field>
+                        <mat-form-field appearance='fill' class='me-2'>
+                            <mat-label>PostalCode</mat-label>
+                            <input matInput placeholder='Enter PostalCode' type='number' formControlName='postalCode'>
+                        </mat-form-field>
+                        <div formGroupName='coordinates'>
+                            <h3>Coordinates :</h3>
+                            <mat-form-field appearance='fill' class='me-2'>
+                                <mat-label>Lat</mat-label>
+                                <input matInput placeholder='Enter Lat' type='number' formControlName='lat'>
+                            </mat-form-field>
+                            <mat-form-field appearance='fill' class='me-2'>
+                                <mat-label>Lng</mat-label>
+                                <input matInput placeholder='Enter Lng' type='number' formControlName='lng'>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 0px 20px;">
+                    <mat-form-field appearance='fill' class='me-2'>
+                        <mat-label>Department</mat-label>
+                        <input matInput placeholder='Enter Department' type='text' formControlName='department'>
+                    </mat-form-field>
+                    <mat-form-field appearance='fill' class='me-2'>
+                        <mat-label>Name</mat-label>
+                        <input type='text' matInput placeholder='Enter Name' formControlName='name'>
+                    </mat-form-field>
+                    <mat-form-field appearance='fill' class='me-2'>
+                        <mat-label>Title</mat-label>
+                        <input matInput placeholder='Enter Title' type='text' formControlName='title'>
+                    </mat-form-field>
+                </div>
+            </div>
         </form>
     </mat-card>
 </div>
 <div mat-dialog-actions align='center'>
-    <!-- <mat-progress-bar mode='indeterminate'></mat-progress-bar> -->
-
     <button mat-raised-button type='submit' (click)='onSubmit()' color='primary'>Save Employee</button>
 </div>
