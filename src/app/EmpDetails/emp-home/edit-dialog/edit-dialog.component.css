@@ -4,3 +4,24 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+mat-card {
+  background-color: #c7d3d4ff;
+  padding: 5px;
+}
+.personal-info,
+.company-address1,
+.company-address,
+.personal-address1,
+.bank-details {
+  padding: 0px 20px;
+}
+
+.heading {
+  background-color: #ff4080;
+  color: #fff;
+}
+h1,
+h2,
+h3 {
+  color: black;
+}
