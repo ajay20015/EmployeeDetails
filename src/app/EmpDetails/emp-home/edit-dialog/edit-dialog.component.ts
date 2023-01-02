@@ -158,6 +158,7 @@ export class EditDialogComponent {
         duration: 3000,
         data: "Updated",
       });
+      this.dialogRef.close();
     } else {
       alert("All Fields are Required..!");
     }

@@ -1,0 +1,22 @@
+.example-card {
+  max-width: 400px;
+  align-items: center;
+  padding: 25px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: lightgray;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.link {
+  align-self: flex-end;
+}
+a,
+mat-card-title {
+  color: blue !important;
+}
