@@ -1,0 +1,32 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "typicode"
+        }
+    ],
+    "EmployeeLogin": [
+        {
+            "userName": "ajay1",
+            "email": "ajay1@gmail.com",
+            "password": "ajay1",
+            "id": 1
+        },
+        {
+            "userName": "ajay",
+            "email": "ajay@gmail.com",
+            "password": "ajay",
+            "id": 2
+        },
+        {
+            "userName": "ajay2",
+            "email": "ajay2@gmail.com",
+            "password": "ajay2",
+            "id": 3
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}

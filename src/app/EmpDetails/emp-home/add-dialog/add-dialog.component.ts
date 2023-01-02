@@ -95,6 +95,8 @@ export class AddDialogComponent implements OnInit {
         duration: 3000,
         data: "Created",
       });
+      this.EmployeeDatas.reset();
+      this.DialogRef.close();
     } else {
       alert("All Fields are Required..!");
     }

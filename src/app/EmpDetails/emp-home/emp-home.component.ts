@@ -3,6 +3,7 @@ import { MatDialog } from "@angular/material/dialog";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatSort } from "@angular/material/sort";
 import { MatTableDataSource } from "@angular/material/table";
+import { Router } from "@angular/router";
 import { UserDataType } from "../DataTypes/user-data-type";
 import { EmpCurdServiseService } from "../emp-curd-servise.service";
 import { AddDialogComponent } from "./add-dialog/add-dialog.component";
@@ -70,7 +71,8 @@ export class EmpHomeComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
     private CurdService: EmpCurdServiseService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public router: Router
   ) {}
 
   ngOnInit() {
@@ -118,5 +120,8 @@ export class EmpHomeComponent implements OnInit, AfterViewInit {
 
   DeleteEmployee(id: number) {
     this.dialog.open(DeleteDialogComponent, { data: id });
+  }
+  logout() {
+    this.dialog.open(DeleteDialogComponent, { data: "Logout" });
   }
 }

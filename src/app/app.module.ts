@@ -14,6 +14,8 @@ import { DeleteDialogComponent } from "./EmpDetails/emp-home/delete-dialog/delet
 import { ReactiveFormsModule } from "@angular/forms";
 import { EmpCurdServiseService } from "./EmpDetails/emp-curd-servise.service";
 import { PopupMessageComponent } from "./EmpDetails/emp-home/popup-message/popup-message.component";
+import { LoginPageComponent } from './login-page/login-page.component';
+import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { PopupMessageComponent } from "./EmpDetails/emp-home/popup-message/popup
     AddDialogComponent,
     DeleteDialogComponent,
     PopupMessageComponent,
+    LoginPageComponent,
+    SignUpPageComponent,
   ],
   imports: [
     BrowserModule,
