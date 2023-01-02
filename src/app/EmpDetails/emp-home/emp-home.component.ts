@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { MatPaginator } from "@angular/material/paginator";
+import { MatSort } from "@angular/material/sort";
 import { MatTableDataSource } from "@angular/material/table";
 import { UserDataType } from "../DataTypes/user-data-type";
 import { EmpCurdServiseService } from "../emp-curd-servise.service";
@@ -66,6 +67,7 @@ export class EmpHomeComponent implements OnInit, AfterViewInit {
     "operations",
   ];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
   constructor(
     private CurdService: EmpCurdServiseService,
     public dialog: MatDialog
@@ -84,6 +86,7 @@ export class EmpHomeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.dataSource.paginator = this.paginator;
+      // this.dataSource.sort = this.sort;
     }, 2000);
   }
 

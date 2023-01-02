@@ -1,14 +1,14 @@
 <mat-toolbar color='accent'>
-    <button mat-icon-button class='example-icon' aria-label='Example icon-button with menu icon'>
+    <button matTooltip="Menu" mat-icon-button class='example-icon' aria-label='Example icon-button with menu icon'>
         <mat-icon>menu</mat-icon>
     </button>
     <span>Employee Details</span>
     <span class='example-spacer'></span>
-    <button mat-icon-button class='example-icon favorite-icon' (click)='AddEmployee()'
+    <button mat-icon-button class='example-icon favorite-icon' matTooltip="Add Employee" (click)='AddEmployee()'
         aria-label='Example icon-button with heart icon'>
         <mat-icon>person_add</mat-icon>
     </button>
-    <button mat-icon-button class='example-icon' aria-label='Example icon-button with share icon'>
+    <button mat-icon-button matTooltip="favorite" class='example-icon' aria-label='Example icon-button with share icon'>
         <mat-icon>favorite</mat-icon>
     </button>
 </mat-toolbar>
@@ -494,15 +494,15 @@
         <ng-container matColumnDef='operations'>
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell style='min-width: 150px !important' *matCellDef='let element'>
-                <button mat-mini-fab color='primary' (click)='ViewEmployee(element.id)'
+                <button mat-mini-fab color='primary' matTooltip="ViewEmployee" (click)='ViewEmployee(element.id)'
                     aria-label='Example icon button with a bookmark icon'>
                     <mat-icon>visibility</mat-icon>
                 </button>
-                <button mat-mini-fab color='accent' (click)='EditEmployee(element.id)'
+                <button mat-mini-fab color='accent' matTooltip="EditEmployee" (click)='EditEmployee(element.id)'
                     aria-label='Example icon button with a bookmark icon'>
                     <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-mini-fab color='warn' (click)='DeleteEmployee(element.id)'
+                <button mat-mini-fab color='warn' matTooltip="DeleteEmployee" (click)='DeleteEmployee(element.id)'
                     aria-label='Example icon button with a bookmark icon'>
                     <mat-icon>delete</mat-icon>
                 </button>
