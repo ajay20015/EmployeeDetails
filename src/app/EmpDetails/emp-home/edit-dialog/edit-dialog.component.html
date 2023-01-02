@@ -1,5 +1,5 @@
 <h1 mat-dialog-title class='d-flex justify-content-between  heading'>
-    <h2 class="mt-4 text-light">Employee Form </h2><button class="mt-3" mat-icon-button
+    <h2 class="mt-4 text-light">Employee Form </h2><button class="mt-3" mat-icon-button matTooltip="close"
         mat-dialog-close><mat-icon>close</mat-icon></button>
 </h1>
 <div mat-dialog-content>
@@ -225,5 +225,6 @@
     </mat-card>
 </div>
 <div mat-dialog-actions align='center'>
-    <button mat-raised-button type='submit' (click)='onSubmit()' color='primary'>Save Employee</button>
+    <button mat-raised-button type='submit' matTooltip="Save Employee Data" (click)='onSubmit()' color='primary'>Save
+        Employee</button>
 </div>

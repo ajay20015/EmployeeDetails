@@ -5,7 +5,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 mat-card {
-  background-color: rgb(246, 235, 235);
+  background-color: #c7d3d4ff;
   padding: 5px;
 }
 .personal-info,
