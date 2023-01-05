@@ -18,6 +18,7 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatSortModule } from "@angular/material/sort";
 import { MatTooltipModule } from "@angular/material/tooltip";
+import { NgxSkeletonLoaderModule } from "ngx-skeleton-loader";
 
 @NgModule({
   declarations: [],
@@ -41,6 +42,7 @@ import { MatTooltipModule } from "@angular/material/tooltip";
     MatSnackBarModule,
     MatSortModule,
     MatTooltipModule,
+    NgxSkeletonLoaderModule,
   ],
 })
 export class EmpMaterialModuleModule {}

@@ -1,7 +1,9 @@
+import { state } from "@angular/animations";
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { Router } from "@angular/router";
+import { Action } from "rxjs/internal/scheduler/Action";
 import { EmpCurdServiseService } from "../EmpDetails/emp-curd-servise.service";
 import { PopupMessageComponent } from "../EmpDetails/emp-home/popup-message/popup-message.component";
 import { EmployeeAuthenticationService } from "../employee-authentication.service";
@@ -51,7 +53,19 @@ export class LoginPageComponent implements OnInit {
       });
       if (user) {
         this.errors = true;
-        this.router.navigate(["emp-home"]);
+
+        this.LoginersData.UpdateRegistration({
+          ...user,
+          active: true,
+        }).subscribe((res) => {
+          console.log(res);
+        });
+
+        // this.router.navigate(["emp-home"]);
+        this.router.navigate(["emp-home", user.id], {
+          state: { userData: user },
+        });
+
         this.popupMsg.openFromComponent(PopupMessageComponent, {
           horizontalPosition: "center",
           verticalPosition: "top",
@@ -60,6 +74,9 @@ export class LoginPageComponent implements OnInit {
         });
       } else {
         this.errors = false;
+        setTimeout(() => {
+          this.errors = true;
+        }, 4000);
       }
     });
 
@@ -84,7 +101,7 @@ export class LoginPageComponent implements OnInit {
       });
       if (user) {
         this.errors = true;
-        this.router.navigate(["emp-home"]);
+        this.router.navigate(["emp-home"], { state: { permission: true } });
         this.popupMsg.openFromComponent(PopupMessageComponent, {
           horizontalPosition: "center",
           verticalPosition: "top",

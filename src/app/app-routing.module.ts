@@ -7,9 +7,10 @@ import { SignUpPageComponent } from "./sign-up-page/sign-up-page.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
-  { path: "login", component: LoginPageComponent },
-  { path: "signup", component: SignUpPageComponent },
-  { path: "emp-home", component: EmpHomeComponent },
+  { path: "login", title: "Login", component: LoginPageComponent },
+  { path: "signup", title: "SignUp", component: SignUpPageComponent },
+  { path: "emp-home/:id", title: "HomePage", component: EmpHomeComponent },
+  { path: "pageNotFound", title: "PageNotFound", component: ErrorComponent },
   { path: "**", component: ErrorComponent },
 ];
 

@@ -3,7 +3,9 @@ import { MatDialog } from "@angular/material/dialog";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatSort } from "@angular/material/sort";
 import { MatTableDataSource } from "@angular/material/table";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
+import { EmployeeAuthenticationService } from "src/app/employee-authentication.service";
+import { EmpAuthDataType } from "../DataTypes/empAuthDataType";
 import { UserDataType } from "../DataTypes/user-data-type";
 import { EmpCurdServiseService } from "../emp-curd-servise.service";
 import { AddDialogComponent } from "./add-dialog/add-dialog.component";
@@ -67,16 +69,33 @@ export class EmpHomeComponent implements OnInit, AfterViewInit {
     "userAgent",
     "operations",
   ];
+
+  displayedColumnsSkelton: string[] = ["skelton"];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  userData!: EmpAuthDataType;
   constructor(
     private CurdService: EmpCurdServiseService,
     public dialog: MatDialog,
-    public router: Router
-  ) {}
+    private router: Router,
+    private empAuth: EmployeeAuthenticationService,
+    private activeRouter: ActivatedRoute
+  ) {
+    // const state = this.router.getCurrentNavigation()?.extras.state;
+    // this.userData = state?.["userData"];
+    // console.log(this.userData);
+  }
 
   ngOnInit() {
     this.getData();
+    this.activeRouter.params.subscribe((params) => {
+      this.empAuth.getSingleUserLoginData(params["id"]).subscribe((res) => {
+        this.userData = res;
+        if (!this.userData.active) {
+          this.router.navigate(["pageNotFound"]);
+        }
+      });
+    });
   }
 
   public getData() {
@@ -122,6 +141,8 @@ export class EmpHomeComponent implements OnInit, AfterViewInit {
     this.dialog.open(DeleteDialogComponent, { data: id });
   }
   logout() {
-    this.dialog.open(DeleteDialogComponent, { data: "Logout" });
+    this.dialog.open(DeleteDialogComponent, {
+      data: { message: "Logout", empData: this.userData },
+    });
   }
 }

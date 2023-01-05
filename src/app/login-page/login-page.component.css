@@ -1,12 +1,12 @@
 .example-card {
-  max-width: 400px;
+  max-width: 350px;
   align-items: center;
   padding: 25px;
   top: 50%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  background-color: lightgray;
+  background-color: #2a2b38;
 }
 
 mat-form-field {
@@ -18,5 +18,18 @@ mat-form-field {
 }
 a,
 mat-card-title {
-  color: blue !important;
+  color: #ffeba7 !important;
+}
+input {
+  color: #2a2b38 !important;
+}
+button {
+  background-color: #ffeba7 !important;
+  color: #2a2b38 !important;
+  font-size: 16px !important;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: #5e6681 !important;
+  color: #ffeba7 !important;
 }
